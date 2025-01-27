@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #chart-container {
+            width: 400px;
+            height: 300px;
+            margin: 20px auto;
+        }
+        table {
+            width: 50%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+
+    <!-- Tableau pour afficher les résultats -->
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Predicted Class</td>
+            <td>{{ prediction.prediction }}</td>
+        </tr>
+        <tr>
+            <td>Score</td>
+            <td>{{ prediction.score }}</td>
+        </tr>
+    </table>
+
+    <!-- Graphique -->
+    <div id="chart-container">
+        <canvas id="predictionChart"></canvas>
+    </div>
+
+    <form action="{% url 'predict' %}" method="get">
+        <button type="submit">Back to Form</button>
+    </form>
+
+    <script>
+        const predictedClass = {{ prediction.prediction }};
+        const score = {{ prediction.score }};
+        const inverseScore = 1 - score;
+
+        const data = {
+            labels: ['Class 0', 'Class 1'],
+            datasets: [{
+                label: 'Prediction Scores',
+                data: predictedClass === 1 ? [inverseScore, score] : [score, inverseScore],
+                backgroundColor: ['#FF6384', '#36A2EB'],
+                borderColor: ['#FF6384', '#36A2EB'],
+                borderWidth: 1
+            }]
+        };
+
+        const config = {
+            type: 'pie',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    },
+                    title: {
+                        display: true,
+                        text: 'Prediction Score Distribution'
+                    }
+                }
+            }
+        };
+
+        new Chart(document.getElementById('predictionChart'), config);
+    </script>
+</body>
+</html>
