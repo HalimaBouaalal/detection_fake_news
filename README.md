@@ -37,7 +37,7 @@ Open a terminal and start the FastAPI server with:
 
 # Interface:
 **Home screen** 
-![GBERT](GBERT.png))
+![GBERT](https://github.com/HalimaBouaalal/detection_fake_news/blob/master/Screenshot%202025-01-28%20001220.png))
 
 **Result** 
 ![GBERT](GBERT.png))
