@@ -12,5 +12,20 @@
 **Output Combination with GBERT**:  
   The outputs from **BERT** and **GPT** are combined and used as input for the **GBERT** model. **GBERT** is then trained on this combined data to make the final prediction.
 
+**Web Application**:
+  A simple user-friendly interface to test the system with custom news articles.
+
+# GBERT Architecture:
+![Project architecture](Project_architecture.png)
+
+# How to start
+**Install the dependencies**:
+`pip install requirements.txt`
+
+
+
+ 
+
+
 
 
