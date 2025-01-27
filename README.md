@@ -19,8 +19,28 @@
 ![Project architecture](Project_architecture.png)
 
 # How to start
-**Install the dependencies**:
-`pip install requirements.txt`
+**Install the dependencies**: 
+    `pip install requirements.txt`
+    
+** Model Deployment and Interface Setup**
+### 1. Model Training
+After training the GBERT model, a `.h5` model file will be generated.
+
+### 2. API Launch
+Open a terminal and start the FastAPI server with:
+`uvicorn main:app --reload --host 127.0.0.1 --port 8001 `
+
+### 3.Open a new terminal and start the django interface by running:
+`cd mysite`
+`python manage.py runserver 2003`
+
+
+
+
+
+
+
+
 
 
 
