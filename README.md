@@ -13,10 +13,12 @@
   The outputs from **BERT** and **GPT** are combined and used as input for the **GBERT** model. **GBERT** is then trained on this combined data to make the final prediction.
 
 **Web Application**:
+
   A simple user-friendly interface to test the system with custom news articles.
 
 # GBERT Architecture:
-![GBERT](GBERT.png))
+![GBERT](GBERT.png)
+
 And a final layer that performs binary classification using the softmax function
 
 # How to start
@@ -36,10 +38,10 @@ Open a terminal and start the FastAPI server with:
 `python manage.py runserver 2003`
 
 # Interface:
-**Home screen** 
+
 ![GBERT](https://github.com/HalimaBouaalal/detection_fake_news/blob/master/Screenshot%202025-01-28%20001220.png))
 
-**Result** 
+
 ![GBERT](https://github.com/HalimaBouaalal/detection_fake_news/blob/master/Screenshot%202025-01-28%20001231.png))
 
 
