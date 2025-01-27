@@ -13,7 +13,6 @@
   The outputs from **BERT** and **GPT** are combined and used as input for the **GBERT** model. **GBERT** is then trained on this combined data to make the final prediction.
 
 **Web Application**:
-
   A simple user-friendly interface to test the system with custom news articles.
 
 # GBERT Architecture:
@@ -25,7 +24,8 @@ And a final layer that performs binary classification using the softmax function
 **Install the dependencies**: 
     `pip install requirements.txt`
     
-** Model Deployment and Interface Setup**
+## Model Deployment and Interface Setup
+
 ### 1. Model Training
 After training the GBERT model, a `.h5` model file will be generated.
 
