@@ -4,4 +4,13 @@
 # Project architecture:
 ![Project architecture](Project_architecture.png)
 
+# Features:
+
+**BERT and GPT Integration**:  
+  The system applies the **BERT** model to analyze the news article's content and the **GPT** model for further contextual understanding. Each model generates an individual output.
+
+**Output Combination with GBERT**:  
+  The outputs from **BERT** and **GPT** are combined and used as input for the **GBERT** model. **GBERT** is then trained on this combined data to make the final prediction.
+
+
 
