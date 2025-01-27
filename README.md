@@ -16,7 +16,7 @@
   A simple user-friendly interface to test the system with custom news articles.
 
 # GBERT Architecture:
-![Project architecture]([image12%20(1).png))
+![Project architecture]([image12(1).png))
 
 # How to start
 **Install the dependencies**: 
