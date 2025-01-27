@@ -17,6 +17,7 @@
 
 # GBERT Architecture:
 ![GBERT](GBERT.png))
+And a final layer that performs binary classification using the softmax function
 
 # How to start
 **Install the dependencies**: 
@@ -34,7 +35,12 @@ Open a terminal and start the FastAPI server with:
 `cd mysite`
 `python manage.py runserver 2003`
 
+# Interface:
+**Home screen** 
+![GBERT](GBERT.png))
 
+**Result** 
+![GBERT](GBERT.png))
 
 
 
